@@ -1,0 +1,257 @@
+ls
+ls
+cd .dotfiles/
+ls
+cd schemes/
+ls
+ls -a
+cd ..
+ls
+cd i3/
+ls
+cd vim
+cd ..
+cd vom
+cd vim/
+ls
+ls -a
+mv .vimrc vimrc
+mv .vimplugins vimplugins
+ls
+cd ..
+mkdir bash
+touch bash/bashrc
+cd vim
+ls -a
+vim vimrc 
+cd ..
+cd ..
+ls -a
+cd .dotfiles/
+ls
+vim dotfiles_setup.sh 
+ls -a ..
+ls
+./dotfiles_setup.sh 
+ls -a ..
+cd ..
+mv .bashrc .dotfiles/bash/bashrc
+ls -al
+ls -a
+exit
+ls -a
+cd .dotfiles/
+vim dotfiles_setup.sh 
+./dotfiles_setup.sh 
+exit
+ls -a
+vim .dir_colors 
+clear
+ls -a
+logout
+exit
+cd .dotfiles/
+ls
+ls -a *
+mv installer.sh vim
+ls
+cd bash/
+ls
+vim bash_aliases
+vim bashrc 
+cd ..
+vim dotfiles_setup.sh 
+./dotfiles_setup.sh 
+vim bash/bashrc 
+vim bash/bash_aliases 
+exit
+ls -a
+ls Pictures/
+mkdir pictures
+mkdir downloads
+mv Downloads/* downloads/
+ls Downloads/
+rm -r Downloads/
+ls
+mkdir pictures/wallpaper
+mv Pictures/wallpaper/* pictures/wallpaper/
+rm -r Pictures/
+ls
+ls -a Desktop/
+cd ..
+clear
+cd
+ls
+ls src/
+ls -a
+exit
+ls -a
+ls -al
+ls
+exit
+cd .dotfiles/bash/
+ls
+vim bashrc 
+vim bash_aliases 
+exit
+ls -a
+exit
+cd .dotfiles/
+cd bash/
+touch bash_logout
+touch bash_profile
+ls
+cd ..
+la
+vim bash_aliases 
+cd bash/
+ls
+vim bashrc 
+vim bash_profile 
+clear
+cd ..
+ls
+vim ../.profile 
+exit
+ls -a
+ls -a
+clear
+la
+ls -a
+cd .vim
+ls
+exit
+ls
+cd terramagna/cartography_service/
+ls
+cd ..
+cd ../learning/rust_pna/
+ls
+cd p2_kvs/
+ls
+cd src/
+ls
+vim lib.rs 
+vim err.rs 
+vim kv.rs 
+exit
+rust
+exit
+ls
+cd .dotfiles/
+ls
+cd polybar/
+ls
+vim polybar.sh 
+cd ..
+cd ../.config/
+ls
+cd polybar/
+ls
+vim config 
+cd
+ls
+cd .dotfiles/
+ls
+ls
+vim dotfiles_setup.sh 
+ls
+install -Dm644 /usr/local/share/doc/polybar/config polybar/config
+install -Dm644 /usr/local/share/doc/polybar/config $HOME/.config/polybar/config
+sudo install -Dm644 /usr/local/share/doc/polybar/config polybar/config
+polybar example
+polybar --help
+polybar -c 
+polybar -c ~/.dotfiles/polybar/config
+polybar --config=~/.dotfiles/polybar/config
+polybar -m
+;s
+ls
+cd polybar/
+ls
+cp ../../.config/polybar/config ./
+ls
+vim config 
+ls
+:q
+ls
+vim polybar.sh 
+mv polybar.sh launch.sh
+vim launch.sh 
+polybar -m
+wget https://raw.githubusercontent.com/jaagr/dots/master/.local/etc/themer/themes/space/polybar
+ls
+vim config 
+rm config 
+ls
+rm config 
+ls
+mv polybar config
+ls
+vim config 
+vim launch.sh 
+chmod +x launch.sh 
+./launch.sh 
+pwd
+vim launch.sh 
+./launch.sh 
+:q
+vim launch.sh 
+./launch.sh 
+:q
+sadasdsadassdsa
+exit
+ps aux | grep polybar
+kill 6664
+clear
+exit
+kill polybar
+pid
+ps aux
+ps aux | grep polybar
+kill 6415
+clear
+ls
+cd .dotfiles/
+ls
+cd polybar/
+ls
+vim launch.sh 
+echo $HOME
+vim launch.sh 
+./launch.sh 
+ls
+clear
+ls
+ls
+ls
+vim config 
+wget https://raw.githubusercontent.com/StickyFingies/Doots/master/polybar/config
+ls
+vim config
+vim config.1 
+rm config
+mv config.1 config
+./launch.sh 
+eexexit
+exit
+cd .dotfiles/
+cd i3
+ls
+vim config 
+vim config 
+vim config
+ls
+ls
+cd
+cd .dotfiles/
+vim dotfiles_setup.sh 
+./dotfiles_setup.sh 
+vim dotfiles_setup.sh 
+vim dotfiles_setup.sh 
+./dotfiles_setup.sh 
+ls
+cd i3
+ls
+clear
+exit
