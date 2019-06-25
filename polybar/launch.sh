@@ -10,16 +10,6 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
 
 for m in $outputs; do
-if [ $m == 'eDP1' ]
-then 
-	TRAY_POSITION=right MONITOR=$m polybar -c $HOME/.dotfiles/polybar/config --reload bottom &
-elif [ $m == 'DP1' ]
-then 
-	TRAY_POSITION=none MONITOR=$m polybar -c $HOME/.dotfiles/polybar/config --reload bottom &
-else
-	TRAY_POSITION=none MONITOR=$m polybar -c $HOME/.dotfiles/polybar/config --reload bottom &
-fi
+	MONITOR=$m polybar -c $HOME/.dotfiles/polybar/config.ini --reload bottom &
+	MONITOR=$m polybar -c $HOME/.dotfiles/polybar/config.ini --reload top &
 done
-
-# Launch polybar
-# polybar --config=$HOME/.dotfiles/polybar/config bottom &

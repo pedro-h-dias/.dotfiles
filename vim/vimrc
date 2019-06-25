@@ -21,6 +21,44 @@ let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ }
 
+
+map <C-t> :NERDTreeToggle<CR>
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }      
+
+
+" GitGutter things
+let g:gitgutter_map_keys = 0
+
+" Better glyphs
+let g:gitgutter_sign_added='┃'
+let g:gitgutter_sign_modified='┃'
+let g:gitgutter_sign_removed='◢'
+let g:gitgutter_sign_removed_first_line='◥'
+let g:gitgutter_sign_modified_removed='◢'
+let g:gitgutter_override_sign_column_highlight = 0
+let g:indentLine_char = '▏'
+
+" Update changes faster
+set updatetime=100
+
+" Better behaviour from autocomplete popup
+set completeopt=noinsert,menuone,noselect
+
 " add yaml configs
 " foldmethod=indent
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml 
