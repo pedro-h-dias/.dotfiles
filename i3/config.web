@@ -1,0 +1,249 @@
+# Modified By Aditya Shakya...
+
+# General
+set $mod Mod4
+font pango:Misc Termsyn, Wuncon Siji 
+new_window pixel 2
+focus_follows_mouse  yes
+floating_modifier $mod
+workspace_auto_back_and_forth yes
+
+## Gaps
+gaps inner 20
+gaps outer 20
+smart_gaps on
+smart_borders on
+
+
+# Keybindings
+## Quick Launch
+bindsym $mod+Return exec --no-startup-id "termite"
+bindsym $mod+Shift+t exec --no-startup-id "termite -e htop -t htop "
+bindsym $mod+Shift+d exec --no-startup-id "dmenu-run"
+bindsym $mod+d exec --no-startup-id "rofi -show run -fullscreen True -lines 3 -line-margin 6 -padding 300 -bw 0"
+bindsym $mod+p exec --no-startup-id "termite -r 'filemanager' -t 'ranger' -e ranger"
+bindsym $mod+i exec --no-startup-id "firefox"
+bindsym $mod+Shift+i exec --no-startup-id "firefox --private-window"
+bindsym $mod+x exec --no-startup-id "oblogout"
+bindsym $mod+l exec --no-startup-id "i3lock-fancy -f Ubuntu-Condensed"
+
+## Window Focus (vim)
+bindsym $mod+Tab focus right
+bindsym $mod+Shift+Tab focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+## Window Move
+bindsym $mod+Shift+Left move left 30px
+bindsym $mod+Shift+Down move down 30px
+bindsym $mod+Shift+Up move up 30px
+bindsym $mod+Shift+Right move right 30px
+#bindsym $mod+Shift+Right move workspace to output right
+#bindsym $mod+Shift+Down move container to output right
+
+## Window Resize
+#bindsym $mod+Mod1+h resize shrink width 30 px or 10 ppt
+#bindsym $mod+Mod1+j resize shrink height 30 px or 10 ppt
+#bindsym $mod+Mod1+k resize grow height 30 px or 10 ppt
+#bindsym $mod+Mod1+l resize grow width 30 px or 10 ppt 
+
+# resize window (you can also use the mouse for that)
+mode "Resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "Resize"
+
+## Tiling
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+g split toggle
+bindsym $mod+f fullscreen
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+#bindsym $mod+a focus parent
+#bindsym $mod+p focus child
+bindsym $mod+q kill
+bindsym $mod+minus move scratchpad
+bindsym $mod+equal scratchpad show
+bindsym $mod+slash bar mode invisible
+bindsym $mod+shift+slash bar mode dock
+
+## Misc
+bindsym $mod+Shift+C reload
+bindsym $mod+Shift+R restart
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Exiting i3' -b 'Yeah' 'i3-msg exit'"
+bindsym Print exec --no-startup-id "scrot -z '%y%m%d%H%m%S.png' -e 'mv $f ~/Pictures/scrots/'"
+
+## Audio
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -Mq set Master,0 5%+ unmute && pkill dunst && notify-send -u low 'Volume Rise ' $(volume)"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -Mq set Master,0 5%- unmute && pkill dunst && notify-send -u low 'Volume Down ' $(volume)"
+bindsym XF86AudioMute exec --no-startup-id "pamixer -t"
+
+
+## Brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10 && pkill dunst && notify-send -u low 'Brightness Inc' $(cat /sys/class/backlight/intel_backlight/brightness)"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10 && pkill dunst && notify-send -u low 'Brightness Dec' $(cat /sys/class/backlight/intel_backlight/brightness)" 
+
+
+# Workspace
+## Terminal
+set $ws1 "1: TTY"
+## Browser
+set $ws2 "2: WEB"
+## Lab
+set $ws3 "3: LAB"
+## Media
+set $ws4 "4: MED"
+## System
+set $ws5 "5: SYS"
+## Mailing
+set $ws6 "6: COM"
+## Doc
+set $ws7 "7: DOC"
+#set $ws8 mail
+#set $ws9 "9"
+set $ws10 "10: MON"
+
+## Workspace keybinding
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+#bindsym $mod+8 workspace $ws8
+#bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+## Move to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+#bindsym $mod+Shift+8 move container to workspace $ws8
+#bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+## Specific window
+for_window [title="(?i)terminal-file"] floating enable, resize set 600 300, move position cursor
+for_window [window_role="pop-up|bubble|task_dialog|Preferences"] floating enable
+for_window [window_type="dialog|menu"] floating enable
+for_window [window_role="browser|GtkFileChooserDialog"] resize set 800 600, move position center
+for_window [class="(?i)pavucontrol|lxappearance|xarchiver|kamus|thunar|geany|nitrogen|gpicview|viewnior|mplayer"] floating enable
+for_window [window_role="(?i)filemanager"] floating enable, resize set 1280 600, move position center, focus
+for_window [class="(?i)st|termite|viewnior|chromium|bomi|vimiv"] focus
+for_window [class="(?i)securecrt|wireshark-gtk"] floating enable, border pixel 2
+for_window [class="(?i)securecrt"] move window to scratchpad, scratchpad show
+for_window [window_role="telnet"] move window to scratchpad, scratchpad show, floating enable, border pixel 0, resize set 1366 250, move absolute position 0 518
+for_window [workspace=$ws2] layout tabbed
+for_window [workspace=$ws6] layout tabbed
+for_window [workspace=$ws7] layout tabbed
+for_window [class="(?i)oblogout"] floating enable, fullscreen enable
+
+## Specific workspaces
+assign [window_role="telnet"] $ws3
+assign [title="htop"] $ws10
+assign [window_role="filemanager"] $ws5
+assign [class="(?i)telegram|irssi"] $ws6
+assign [window_role="browser"] $ws2
+assign [class="(?i)st|termite"] $ws1
+assign [class="(?i)gns3|securecrt|wireshark-gtk"] $ws3
+assign [class="(?i)mcomix|mpv|vimiv|gimp-2.8|smplayer"] $ws4
+assign [class="(?i)subl3|mupdf|zathura|fbreader"] $ws7
+
+
+# Color
+set $cbg "#00bcd4"
+set $ccolor "#efebe0"
+set $cunfo "#222D32"
+set $cindi "#145ba7"
+set $cindiu "#8a9db1"
+
+#<colorclass>           <border> <background> <text> <indicator> <child_border>
+client.focused          $cbg    $cbg    $ccolor $cindi   $cbg
+client.focused_inactive $cbg    $cunfo  $ccolor $cindiu   $cunfo
+client.unfocused        $cbg    $cunfo  $ccolor $cindiu   $cunfo
+client.urgent           $cbg    $cunfo  $ccolor $cindi   $cunfo
+
+# Hide i3 Windows Titlebar
+for_window [class="^.*"] border pixel 2
+
+# Start i3-gaps Mode
+set $mode_gaps Gaps: (O) Outer, (I) Inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# Startup
+
+# Restore wallpaper
+exec nitrogen --restore
+
+# Start Compositing Manager
+exec --no-startup-id compton -b
+
+exec_always --no-startup-id "sh ~/.config/polybar/launch.sh"
+
+exec_always --no-startup-id "mpd"
+
+exec_always --no-startup-id "dunst &"
+
+exec_always --no-startup-id "thunar --daemon &"

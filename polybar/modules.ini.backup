@@ -138,8 +138,8 @@ full-at = 99
 
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
-battery = BAT0
-adapter = AC
+battery = BAT1
+adapter = ACAD
 
 ; If an inotify event haven't been reported in this many
 ; seconds, manually poll for new values.
@@ -522,8 +522,8 @@ label-unmounted = %mountpoint%: not mounted
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/i3]
-type = internal/i3
+;;[module/i3]
+;;type = internal/i3
 
 ; Only show workspaces defined on the same output as the bar
 ;
@@ -535,7 +535,7 @@ type = internal/i3
 
 ; This will split the workspace name on ':'
 ; Default: false
-strip-wsnumbers = true
+;;strip-wsnumbers = true
 
 ; Sort the workspaces by index instead of the default
 ; sorting that groups the workspaces by output
@@ -567,12 +567,12 @@ strip-wsnumbers = true
 
 ; ws-icon-[0-9]+ = label;icon
 ; NOTE: The label needs to match the name of the i3 workspace
-ws-icon-0 = 1;♚
-ws-icon-1 = 2;♛
-ws-icon-2 = 3;♜
-ws-icon-3 = 4;♝
-ws-icon-4 = 5;♞
-ws-icon-default = ♟
+;;ws-icon-0 = 1;♚
+;;ws-icon-1 = 2;♛
+;;ws-icon-2 = 3;♜
+;;ws-icon-3 = 4;♝
+;;ws-icon-4 = 5;♞
+;;ws-icon-default = ♟
 ; NOTE: You cannot skip icons, e.g. to get a ws-icon-6
 ; you must also define a ws-icon-5.
 
@@ -706,8 +706,8 @@ label = " %mb_used%"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-;;[module/mpd]
-;;type = internal/mpd
+[module/mpd]
+type = internal/mpd
 
 ; Host where mpd is running (either ip or domain name)
 ; Can also be the full path to a unix socket where mpd is running.
@@ -717,7 +717,7 @@ label = " %mb_used%"
 
 ; Seconds to sleep between progressbar/song timer sync
 ; Default: 1
-;;interval = 2
+interval = 2
 
 ; Available tags:
 ;   <label-song> (default)
@@ -737,9 +737,9 @@ label = " %mb_used%"
 ;   <icon-next>
 ;   <icon-seekb>
 ;   <icon-seekf>
-;;format-online =  <label-song>  <icon-prev> <toggle> <icon-next>
-;;format-online-background = ${color.mb}
-;;format-online-padding = ${layout.module-padding}
+format-online =  <label-song>  <icon-prev> <toggle> <icon-next>
+format-online-background = ${color.mb}
+format-online-padding = ${layout.module-padding}
 ;format-playing = ${self.format-online}
 ;format-paused = ${self.format-online}
 ;format-stopped = ${self.format-online}
@@ -755,9 +755,9 @@ label = " %mb_used%"
 ;   %date%
 ;   %title%
 ; Default: %artist% - %title%
-;;label-song =  "%artist% - %title%"
-;;label-song-maxlen = 25
-;;label-song-ellipsis = true
+label-song =  "%artist% - %title%"
+label-song-maxlen = 25
+label-song-ellipsis = true
 
 ; Available tokens:
 ;   %elapsed%
@@ -767,21 +767,21 @@ label = " %mb_used%"
 
 ; Available tokens:
 ;   None
-;;label-offline = "MPD is offline"
+label-offline = "MPD is offline"
 
 ; Only applies if <icon-X> is used
-;;icon-play = 
-;;icon-pause = 
-;;icon-stop = 
-;;icon-prev = 
-;;icon-next = 
-;;icon-seekb = ⏪
-;;icon-seekf = ⏩
-;;icon-random = 🔀
-;;icon-repeat = 🔁
-;;icon-repeatone = 🔂
-;;icon-single = 🔂
-;;icon-consume = ✀
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
 
 ; Used to display the state of random/repeat/repeatone/single
 ; Only applies if <icon-[random|repeat|repeatone|single]> is used
@@ -901,36 +901,36 @@ ramp-signal-4 = 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-;;[module/pulseaudio]
-;;type = internal/pulseaudio
+[module/pulseaudio]
+type = internal/pulseaudio
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
-;;sink = alsa_output.pci-0000_12_00.3.analog-stereo
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true
-;;use-ui-max = true
+use-ui-max = true
 
 ; Interval for volume increase/decrease (in percent points)
 ; Default: 5
-;;interval = 5
+interval = 5
 
 ; Available tags:
 ;   <label-volume> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
-;;format-volume = <ramp-volume> <label-volume>
-;;format-volume-background = ${color.mb}
-;;format-volume-padding = ${layout.module-padding}
+format-volume = <ramp-volume> <label-volume>
+format-volume-background = ${color.mb}
+format-volume-padding = ${layout.module-padding}
 
 ; Available tags:
 ;   <label-muted> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
-;;format-muted = <label-muted>
-;;format-muted-prefix = 
-;;format-muted-background = ${color.mb}
+format-muted = <label-muted>
+format-muted-prefix = 
+format-muted-background = ${color.mb}
 
 ; Available tokens:
 ;   %percentage% (default)
@@ -938,17 +938,17 @@ ramp-signal-4 = 
 
 ; Available tokens:
 ;   %percentage% (default)
-;;label-muted = Muted
-;;label-muted-foreground = ${color.ac}
-;;label-muted-background = ${color.mb}
-;;label-muted-padding = ${layout.module-padding}
+label-muted = Muted
+label-muted-foreground = ${color.ac}
+label-muted-background = ${color.mb}
+label-muted-padding = ${layout.module-padding}
 
 ; Only applies if <ramp-volume> is used
-;;ramp-volume-0 = 
-;;ramp-volume-1 = 
-;;ramp-volume-2 = 
-;;ramp-volume-3 = 
-;;ramp-volume-4 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -1086,7 +1086,7 @@ type = internal/xworkspaces
 ; on different bars
 ;
 ; Default: false
-pin-workspaces = false
+pin-workspaces = true
 
 ; Create click handler used to focus desktop
 ; Default: true
@@ -1100,10 +1100,10 @@ enable-scroll = true
 ; NOTE: The desktop name needs to match the name configured by the WM
 ; You can get a list of the defined desktops using:
 ; $ xprop -root _NET_DESKTOP_NAMES
-icon-0 = 2:TTY;2: 
-icon-1 = 1:WEB;1: 
-icon-2 = 3:LAB;3: 
-icon-3 = 4;4: 
+icon-0 = TTY;
+icon-1 = WEB;
+icon-2 = LAB;
+icon-3 = MED;
 ;icon-4 = 5;
 icon-default = 
 
