@@ -11,11 +11,11 @@ The distro I'm using right now is Manjaro.
 ## Installation steps
 1. Install system
 
-   + Enable Pacman, AUR
+  + Enable Pacman, AUR
 
-   + Remove GRUB delay
-   
-   To remove grub start delay, edit `/etc/default/grub` so that `GRUB_TIMEOUT=0`
+  + Remove GRUB delay
+  
+  To remove grub start delay, edit `/etc/default/grub` so that `GRUB_TIMEOUT=0`.
 
 2. Setup ssh-keys
 
@@ -34,72 +34,111 @@ The distro I'm using right now is Manjaro.
 
    Then, setup a `config` file with as many hosts as you want:
 
-   ```sh
-   Host github.com
+  ```sh
+  Host github.com
 	HostName github.com
 	User git
 	IdentityFile ~/.ssh/github
 
-   Host gitlab.com
+  Host gitlab.com
 	HostName gitlab.com
 	User git
 	IdentityFile ~/.ssh/gitlab
 
-   ```
+  ```
 
-3. Setup allacrity
-   First, we will need to install some dependencies:
+3. Setup vim
 
-   ```sh
-   pacman -S cmake freetype2 fontconfig pkg-config make
-   ```
+  For now, install [Pathogen](https://github.com/tpope/vim-pathogen).
 
-   Then, in order to build
+  ```sh
+  mkdir -p ~/.vim/autoload ~/.vim/bundle
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  ```
 
-   + Color scheme
+  Then, clone `/vim/vimrc` from and create the symlinks.
 
-2. Setup vim
+  The following plugins are being used so far:
 
-3. Setup i3 configs
-   + Default workspaces
+  [auto-pairs](https://github.com/jiangmiao/auto-pairs), 
+  [dbtext.vim](https://github.com/vim-scripts/dbext.vim), 
+  [gruvbox](https://github.com/morhetz/gruvbox), 
+  [lightline.vim](https://github.com/itchyny/lightline.vim), 
+  [nerdtree](https://github.com/scrooloose/nerdtree), 
+  [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin), 
+  [rust.vim](https://github.com/rust-lang/rust.vim), 
+  [vim-gitgutter](https://github.com/airblade/vim-gitgutter), 
+  [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors), 
+  [vim-surround](https://github.com/tpope/vim-surround), 
+  [yaml-vim](https://github.com/mrk21/yaml-vim), 
+  [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 
-4. Setup keyboard config
+4. Setup rust environment
 
-5. Setup Polybar and wallpaper
+  [rust-vim](https://github.com/ivanceras/rust-vim-setup)
+
+  Install rust
+
+  + rustc
+  + rustfmt
+
+5. Setup allacrity
+
+  First, we will need to install some dependencies:
+
+  ```sh
+  pacman -S cmake freetype2 fontconfig pkg-config make
+  ```
+
+  Then, in order to build
+
+  + Color scheme
+
+
+
+6. Setup i3 configs
+
+  + Default workspaces
+
+7. Setup keyboard config
+
+8. Setup Polybar and wallpaper
 
 8. Setup working environment
-   + Clone repos
-   + DBeaver
-   + psql
 
-6. Setup rust environment
-   + rustc
-   + rustfmt
+  + Clone repos
+  + DBeaver
+  + psql
 
-7. Setup python environment
+9. Setup python environment
 
-8. Setup markdown environment
+10. Setup markdown environment
 
-9. Setup hacking environment
-   + Networktools
-   + Wireshark
+11. Setup hacking environment
 
-10. Setup VMs
-   + Kali
-   + Protostar
-   + Windows
+  + Networktools
+  + Wireshark
 
-11. Install some useful applications
-   + Spotify
-   + Slack
-   + Chrome-dev
-   + Veracrypt
+12. Setup VMs
 
-12. Install games
-   + Minecraft
-      + Remember to use java 8
+  + Kali
+  + Protostar
+  + Windows
 
-13. Future projects
-   + Backup system
-   + LaTeX
-   + Fonts
+13. Install some useful applications
+
+  + Spotify
+  + Slack
+  + Chrome-dev
+  + Veracrypt
+
+14. Install games
+
+  + Minecraft
+   + Remember to use java 8
+
+15. Future projects
+  + Backup system
+  + Switch themes
+  + LaTeX
+  + Fonts

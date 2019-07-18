@@ -67,6 +67,9 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 au! BufNewFile,BufReadPost *.sql set filetype=sql 
 autocmd FileType sql setlocal ts=2 sts=2 sw=2 expandtab
 
+au! BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd FileType markdown setlocal ts=2 sts=2 sw=2 expandtab
+
 :set number relativenumber	" Relative line numbers
 
 :augroup numbertoggle
