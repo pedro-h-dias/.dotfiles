@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# ssh files
+ln -sf ~/.dotfiles/ssh/config 			~/.ssh/config
+
 # Vim files
 ln -sf ~/.dotfiles/vim/vimrc 			~/.vimrc
 
