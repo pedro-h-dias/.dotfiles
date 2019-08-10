@@ -80,3 +80,7 @@ autocmd FileType markdown setlocal ts=2 sts=2 sw=2 expandtab
 
 " Rust autocomplete
 let g:ycm_rust_src_path="/home/locutor/.src/rust-master/src/"
+
+" Rust configs
+" let g:rust_fold = 1
+let g:rustfmt_autosave = 1
