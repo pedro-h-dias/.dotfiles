@@ -16,6 +16,5 @@ ln -sf ~/.dotfiles/bash/bash_aliases 		~/.bash_aliases
 # i3 files
 ln -sf ~/.dotfiles/i3/config 			~/.i3/config
 
-# compton files
-ln -sf ~/.dotfiles/compton/compton.conf 	~/.config/compton.conf
-
+# Others
+ln -sf ~/.dotfiles/.profile 			~/.profile

@@ -9,6 +9,6 @@ for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
 	fi
 done
 
-xrandr --output DP1 --left-of eDP1
+xrandr --output DP1 --right-of eDP1
 
 $HOME/.dotfiles/polybar/launch.sh 
