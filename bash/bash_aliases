@@ -2,4 +2,4 @@
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-
+alias clip='xclip -sel clip'
