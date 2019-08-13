@@ -24,6 +24,7 @@ let g:lightline = {
       \	},
       \ 'component_function': {
       \	  'gitbranch': 'LightlineGitBranch',
+      \   'filename': "LightlineFileName",
       \ },
       \ }
 
@@ -35,6 +36,10 @@ function! LightlineGitBranch()
     endif
   endif
   return ''
+endfunction
+
+function! LightlineFileName() abort
+  return winwidth(0) > 70 ? WebDevIconsGetFileTypeSymbol() . ' ' . expand('%:t') : ''
 endfunction
 
 " Nerdtree configs
