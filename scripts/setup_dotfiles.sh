@@ -21,3 +21,4 @@ ln -sf ~/.dotfiles/i3/config 			~/.i3/config
 
 # Others
 ln -sf ~/.dotfiles/.profile 			~/.profile
+ln -sf /home/locutor/.dotfiles/X11/00-keyboard.conf 	/etc/X11/xorg.conf.d/00-keyboard.conf
