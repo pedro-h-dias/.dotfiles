@@ -9,3 +9,4 @@ git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
 git clone https://github.com/terryma/vim-multiple-cursors ~/.vim/bundle/vim-multiple-cursors
 git clone https://github.com/tpope/vim-surround ~/.vim/bundle/vim-surround
 git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
+git clone https://github.com/tpope/vim-fugitive ~/.vim/bundles/vim-fugitive

@@ -5,8 +5,8 @@ syntax enable
 
 " Colorscheme configs
 let g:gruvbox_italic = 1
-colorscheme gruvbox		" Setting gruvbox color scheme 
-set background=dark 		" Setting dark mode
+colorscheme gruvbox 
+set background=dark 
 set termguicolors
 "let g:grubbox_contrast_dark = hard 
 "let g:gruvbox_gruvbox_plugin_hi_groups = 1
@@ -17,7 +17,25 @@ set noshowmode
 " Lightline configs
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \	  'left': [['mode', 'paste'], 
+      \	  	    ['gitbranch', 'readonly', 'filename', 'modified']],
+      \   'right': [['percent', 'lineinfo']]
+      \	},
+      \ 'component_function': {
+      \	  'gitbranch': 'LightlineGitBranch',
+      \ },
       \ }
+
+function! LightlineGitBranch()
+  if exists('*fugitive#head')
+    let branch = fugitive#head(8)
+    if branch !=# ''
+      return ' '.branch
+    endif
+  endif
+  return ''
+endfunction
 
 " Nerdtree configs
 map <C-t> :NERDTreeToggle<CR>
