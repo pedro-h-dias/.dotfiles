@@ -8,7 +8,7 @@ set clipboard=unnamedplus
 
 " Colorscheme configs
 let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = 'hard' 
+"let g:gruvbox_contrast_dark = 'hard' 
 let g:gruvbox_gruvbox_plugin_hi_groups = 1
 let g:gruvbox_filetype_hi_groups = 1
 colorscheme gruvbox 
