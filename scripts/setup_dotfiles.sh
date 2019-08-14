@@ -4,7 +4,10 @@
 ln -sf ~/.dotfiles/ssh/config 			~/.ssh/config
 
 # Vim files
-ln -sf ~/.dotfiles/vim/vimrc 			~/.vimrc
+ln -sf ~/.dotfiles/vim/vimrc			~/.vimrc
+
+# NeoVim files
+ln -sf ~/.dotfiles/nvim/init.vim		~/.config/nvim/init.vim
 
 # Bash files
 ln -sf ~/.dotfiles/bash/bashrc	 		~/.bashrc
