@@ -5,6 +5,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export BROWSER=/usr/bin/firefox
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.dotfiles/bin:$PATH"
 
 setxkbmap -layout "us" -variant "altgr-intl"
 
