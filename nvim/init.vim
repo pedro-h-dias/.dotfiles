@@ -6,9 +6,14 @@ syntax enable
 
 set clipboard=unnamedplus
 
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+"
+" Better behaviour from autocomplete popup
+set completeopt=noinsert,menuone,noselect
+
 " Colorscheme configs
 let g:gruvbox_italic = 1
-"let g:gruvbox_contrast_dark = 'hard' 
 let g:gruvbox_gruvbox_plugin_hi_groups = 1
 let g:gruvbox_filetype_hi_groups = 1
 colorscheme gruvbox 
@@ -17,7 +22,7 @@ set background=dark
 set termguicolors
 
 set laststatus=2
-set noshowmode
+set noshowmode 
 
 " Nerdtree configs
 map <C-t> :NERDTreeToggle<CR>
@@ -51,9 +56,6 @@ let g:indentLine_char = '▏'
 
 " Update changes faster
 set updatetime=100
-
-" Better behaviour from autocomplete popup
-set completeopt=noinsert,menuone,noselect
 
 " Yaml configs
 " foldmethod=indent
