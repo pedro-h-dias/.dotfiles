@@ -65,24 +65,14 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Disable SQL autocomplete
 let g:omni_sql_no_default_maps = 1
-" Sql configs
-au! BufNewFile,BufReadPost *.sql set filetype=sql 
-autocmd FileType sql setlocal ts=2 sts=2 sw=2 expandtab
-
-" Markdown configs
-au! BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd FileType markdown setlocal ts=2 sts=2 sw=2 expandtab
 
 " Relative line numbers
-:set number relativenumber	" Relative line numbers
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
-
-" Rust autocomplete
-let g:ycm_rust_src_path="/home/locutor/.src/rust-master/src/"
+set number relativenumber	" Relative line numbers
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 " Rust configs
 " let g:rust_fold = 1

@@ -5,7 +5,9 @@ if dein#load_state('/home/locutor/.local/share/nvim/dein')
 
   call dein#add('/home/locutor/.local/share/nvim/dein/repos/github.com/Shougo/dein.vim')
 
+  call dein#add('neoclide/coc.nvim', {'merged':0, 'build': 'yarn install --frozen-lockfile'}) 
   call dein#add('Shougo/deoplete.nvim')	" Async completion
+  call dein#add('sheerun/vim-polyglot.git') 
   call dein#add('morhetz/gruvbox') " Color scheme
   call dein#add('shinchu/lightline-gruvbox.vim') " Lightline
   call dein#add('jiangmiao/auto-pairs')
@@ -16,7 +18,6 @@ if dein#load_state('/home/locutor/.local/share/nvim/dein')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('terryma/vim-multiple-cursors')
   call dein#add('tpope/vim-surround')
-  call dein#add('Valloric/YouCompleteMe')
   call dein#add('tpope/vim-fugitive')
   call dein#add('ryanoasis/vim-devicons') 
 
