@@ -4,11 +4,13 @@ let g:lightline = {
       \ 'active': {
       \	  'left': [['mode', 'paste'], 
       \	  	    ['gitbranch', 'readonly', 'filename', 'modified']],
-      \   'right': [['percent', 'lineinfo']]
+      \   'right': [['percent', 'lineinfo'],
+      \		    ['cocstatus']]
       \	},
       \ 'component_function': {
       \	  'gitbranch': 'LightlineGitBranch',
-      \   'filename': "LightlineFileName",
+      \   'cocstatus': 'LightlineDiagnostic',
+      \   'filename': 'LightlineFileName',
       \ },
       \ }
 
@@ -20,6 +22,32 @@ function! LightlineGitBranch()
     endif
   endif
   return ''
+endfunction
+
+function! LightlineDiagnostic() abort
+  let info = get(b:, 'coc_diagnostic_info', {})
+
+  let errors = get(info, 'error', 0)
+  let warnings = get(info, 'warning', 0)
+
+  let status = ''
+  if errors > 0
+    let status .= '' . string(errors)
+
+    if warnings > 0
+      let status .= ' '
+    endif
+  endif
+
+  if warnings > 0
+    let status .= '' . string(warnings)
+  endif
+
+  if errors + warnings == 0
+    return ''
+  else
+    return status
+  endif
 endfunction
 
 function! LightlineFileName() abort

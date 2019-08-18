@@ -1,4 +1,5 @@
 source ~/.dotfiles/nvim/plugins.vim
+source ~/.dotfiles/nvim/coc.vim
 source ~/.dotfiles/nvim/lightline.vim
 
 filetype plugin indent on
@@ -25,6 +26,14 @@ set termguicolors
 set laststatus=2
 set noshowmode 
 
+" Tab key enters 2 spaces
+" To enter a TAB character when `expandtab` is in effect,
+" CTRL-v-TAB
+set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+" Indent new line the same as the preceding line
+set autoindent
+
 " Nerdtree configs
 map <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -42,7 +51,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }      
 
-
 " GitGutter configs
 let g:gitgutter_map_keys = 0
 
@@ -58,14 +66,6 @@ let g:indentLine_char = '▏'
 " Update changes faster
 set updatetime=100
 
-" Yaml configs
-" foldmethod=indent
-au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-
-" Disable SQL autocomplete
-let g:omni_sql_no_default_maps = 1
-
 " Relative line numbers
 set number relativenumber	" Relative line numbers
 augroup numbertoggle
@@ -74,6 +74,9 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-" Rust configs
-" let g:rust_fold = 1
-let g:rustfmt_autosave = 1
+
+" Configure undo history
+set undofile
+set undodir=$HOME/.vimundo
+set undolevels=1000
+set undoreload=10000
