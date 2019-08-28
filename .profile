@@ -6,6 +6,7 @@ export BROWSER=/usr/bin/firefox
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.dotfiles/bin:$PATH"
+export GOPATH="$HOME/.src/go"
 
 setxkbmap -layout "us" -variant "altgr-intl"
 
