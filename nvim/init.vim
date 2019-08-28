@@ -1,5 +1,4 @@
 source ~/.dotfiles/nvim/plugins.vim
-source ~/.dotfiles/nvim/coc.vim
 source ~/.dotfiles/nvim/lightline.vim
 
 filetype plugin indent on
