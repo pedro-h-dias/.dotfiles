@@ -7,6 +7,7 @@ if dein#load_state('/home/locutor/.local/share/nvim/dein')
 
   call dein#add('morhetz/gruvbox')
   call dein#add('shinchu/lightline-gruvbox.vim')
+  call dein#add('sheerun/vim-polyglot')
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('morhetz/gruvbox')
   call dein#add('itchyny/lightline.vim') 
