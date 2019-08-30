@@ -75,6 +75,7 @@ bindsym $mod+Ctrl+m exec $term -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec $term -e 'bmenu'
 bindsym $mod+F2 exec firefox
+bindsym $mod+Shift+p exec firefox --private-window
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
