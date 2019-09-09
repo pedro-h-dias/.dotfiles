@@ -2,6 +2,7 @@
 
 # ssh files
 ln -sf ~/.dotfiles/ssh/config 			~/.ssh/config
+ln -sf ~/.dotfiles/systemd/ssh-agent.service 	~/.config/systemd/user/ssh-agent.service
 
 # Vim files
 ln -sf ~/.dotfiles/vim/vimrc			~/.vimrc
