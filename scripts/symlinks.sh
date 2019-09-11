@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # ssh files
 ln -sf ~/.dotfiles/ssh/config 			~/.ssh/config
@@ -22,3 +22,5 @@ ln -sf ~/.dotfiles/i3/config 			~/.i3/config
 
 # Others
 ln -sf ~/.dotfiles/.profile 			~/.profile
+ln -sf ~/.dotfiles/alacritty.yml		~/.config/alacritty/
+ln -sf ~/.dotfiles/gitconfig			~/.gitconfig
