@@ -1,0 +1,9 @@
+[user]
+	email = pdcmpa@gmail.com
+	name = Pedro Dias
+[push]
+	default = current
+[pull]
+	rebase = true
+[color]
+	ui = true
