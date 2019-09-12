@@ -1,4 +1,6 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
+env:
+  TERM: xterm-256color
 
 window:
   dimensions:
@@ -42,7 +44,7 @@ font:
     #family: monospace
     #style: Italic
 
-  size: 14.0
+  size: 12.0
 
   offset:
     x: 0
@@ -52,7 +54,7 @@ font:
     x: 0
     y: 0
 
-    #scale_with_dpi: true
+    scale_with_dpi: true
 
 draw_bold_text_with_bright_colors: true
 
@@ -130,6 +132,7 @@ mouse:
   triple_click: { threshold: 300 }
 
   hide_when_typing: false
+  faux_scrollback_lines: 1
 
 mouse_bindings:
   - { mouse: Middle, action: None }
