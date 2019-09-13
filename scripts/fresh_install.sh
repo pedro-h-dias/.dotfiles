@@ -9,6 +9,9 @@ sudo sed -i 's/#Color/Color/' /etc/pacman.conf
 # update all packages
 sudo pacman --noconfirm -Syu
 
+# install go - dependency for yay
+sudo pacman --noconfirm -Sy go
+
 # install yay
 if ! which yay; then
 	git clone https://aur.archlinux.org/yay.git
@@ -17,6 +20,17 @@ if ! which yay; then
 	popd
 	rm -fr yay
 fi
+
+yay --needed --noconfirm -S \
+  xorg-server \
+  xf86-input-mouse \
+  xf86-input-keyboard \
+  xf86-video-vesa \
+  xorg-xinit \
+  i3-gaps \
+  i3status \
+  i3lock \
+  dmenu
 
 # install all packages
 yay --needed --noconfirm -S \

@@ -20,6 +20,10 @@ ln -sf ~/.dotfiles/bash/bash_aliases 		      ~/.bash_aliases
 # Zsh files
 ln -sf ~/.dotfiles/zsh/zshrc			~/.zshrc
 
+# X files
+ln -sf ~/.dotfiles/X11/.xinitrc   ~/.xinitrc
+ln -sf ~/.dotfiles/X11/.xprofile  ~/.xprofile
+
 # i3 files
 ln -sf ~/.dotfiles/i3/config 			            ~/.i3/config
 
