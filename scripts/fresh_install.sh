@@ -15,44 +15,39 @@ if ! which yay; then
 	pushd yay
 	makepkg -i --needed --noconfirm
 	popd
-	rm -fr yay
+	rm -rf yay
 fi
 
-# install all packages
+# install appearance stuff
 yay --needed --noconfirm -S \
-	alacritty-git \
 	arc-gtk-theme \
   arc-icon-theme \
-	audacity \
-	deluge \
+  gtk-chtheme \
+  lxappearance \
+	polybar 
+
+
+# install base packages
+yay --needed --noconfirm -S \
+	alacritty-git \
 	diff-so-fancy \
 	docker \
 	docker-compose \
 	exa \
 	fd \
-	firefox \
 	git \
 	go \
 	go-tools \
-	google-chrome \
 	htop \
 	httpie \
 	iotop \
-	iptables \
-	iproute2 \
-	iputils \
 	libgit2 \
 	make \
 	man-pages \
 	neovim-git \
-	net-tools \
-	networkmanager \
-	nmap \
 	ntfs-3g \
-	obs-studio \
 	openssh \
 	pavucontrol \
-	polybar \
 	qemu \
 	ranger \
 	rutsup \
@@ -62,12 +57,17 @@ yay --needed --noconfirm -S \
 	unzip \
 	veracrypt \
 	virt-manager \
-	vlc \
 	wget \
-	xclip \
-	zsh \
-	zsh-syntax-highlighting \
-	zsh-you-should-use
+	xclip 
+
+# install networking stuff
+yay --needed --noconfirm -S \
+	iptables \
+	iproute2 \
+	iputils \
+	net-tools \
+	networkmanager \
+	nmap 
 
 # install hacking stuff
 yay --needed --noconfirm -S \
@@ -78,22 +78,36 @@ yay --needed --noconfirm -S \
 	#metasploit \
 	wireshark
 
+# install extra applications
+yay --needed --noconfirm -S \
+	audacity \
+	deluge \
+	firefox \
+	google-chrome \
+	obs-studio \
+	vlc 
+
 # install remaining applications
 yay --needed --noconfim -S \
 	minecraft-launcher \
 	slack-desktop \
 	spotify
 
+# TODO: use spotify daemon instead, and a cli
+
 # install dotfiles
 git clone --recursive https://github.com/pedro-h-dias/.dotfiles || true
-#~/.dotfiles/scripts/symlinks.sh
-#ln -fs .dotfiles/.{gitconfig,vim{,rc},zshrc} .
-#ln -fns ../.vim .config/nvim
-#sudo ln -fs ~/.oh-my-zsh ~/.dotfiles .dotfiles/.{vim{,rc},zshrc} /root
-#
-## install neovim plugins
-#nvim +PlugInstall +qa -E || true
-#nvim +UpdateRemotePlugins +q
+~/.dotfiles/scripts/symlinks.sh
+
+# install neovim plugins
+nvim +"call dein#install()" +qa
+nvim +"call dein#update()" +qa
+
+# install zsh stuff
+yay --needed --noconfirm -S \
+	zsh \
+	zsh-syntax-highlighting \
+	zsh-you-should-use
 
 # change the shell to zsh
 sudo chsh -s /usr/bin/zsh
