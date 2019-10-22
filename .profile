@@ -9,4 +9,4 @@ export PATH="$HOME/.dotfiles/bin:$PATH"
 export GOPATH="$HOME/.src/go"
 
 setxkbmap -layout "us" -variant "altgr-intl"
-
+xset -b
