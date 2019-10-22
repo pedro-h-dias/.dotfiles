@@ -22,6 +22,7 @@ fi
 yay --needed --noconfirm -S \
 	alacritty-git \
 	arc-gtk-theme \
+  arc-icon-theme \
 	audacity \
 	deluge \
 	diff-so-fancy \
@@ -73,6 +74,7 @@ yay --needed --noconfirm -S \
 	aircrack-ng \
 	binwalk \
 	crunch \
+  hashcat \
 	#metasploit \
 	wireshark
 

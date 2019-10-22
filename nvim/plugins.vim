@@ -1,4 +1,4 @@
-set runtimepath+=/home/locutor/.local/share/nvim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/locutor/.local/share/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state('/home/locutor/.local/share/nvim/dein')
   call dein#begin('/home/locutor/.local/share/nvim/dein')
