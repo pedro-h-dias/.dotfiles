@@ -54,7 +54,7 @@ yay --needed --noconfirm -S \
 	polybar \
 	qemu \
 	ranger \
-	rutsup \
+	rustup \
 	sudo \
 	tar \
 	unrar \
