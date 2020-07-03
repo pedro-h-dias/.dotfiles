@@ -7,8 +7,3 @@ Host gitlab.com
 	HostName gitlab.com
 	User git
 	IdentityFile ~/.ssh/gitlab
-
-Host shield.server
-  HostName shield.server
-  User locutor
-  IdentityFile ~/.ssh/shield
