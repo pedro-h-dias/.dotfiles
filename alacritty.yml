@@ -29,7 +29,7 @@ scrolling:
 
   auto_scroll: false
 
-tabspaces: 8
+tabspaces: 4
 
 font:
   #normal:

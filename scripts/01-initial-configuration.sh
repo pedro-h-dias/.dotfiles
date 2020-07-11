@@ -44,6 +44,9 @@ yay --needed --noconfirm -S \
 # create link to .profile
 ln -sf ~/.dotfiles/.profile ~/.profile
 
+# install rust and go
+yay --needed --noconfirm -S go rustup
+
 # create alias to exa, fd and diff
 alias ls='exa'
 alias ll='exa -lh'
