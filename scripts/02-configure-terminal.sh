@@ -1,10 +1,17 @@
 #!/bin/bash
 
-yay --needed --noconfirm -S \
-	alacritty-git \
-	tmux
+if ! which alacritty; then
+  yay --needed --noconfirm -S alacritty-git
+fi
+
+if ! which tmux; then
+	yay --needed --noconfirm -S tmux-git
+fi
 
 # create link to alacritty configs
+if [ ! -f ~/.config/alacritty/alacritty.yml ]; then
+  mkdir -p ~/.config/alacritty
+fi
 ln -sf ~/.dotfiles/alacritty.yml ~/.config/alacritty/
 
 # create link to tmux configs
