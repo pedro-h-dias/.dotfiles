@@ -1,9 +1,9 @@
-set runtimepath+=/home/locutor/.local/share/nvim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/locutor/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('/home/locutor/.local/share/nvim/dein')
-  call dein#begin('/home/locutor/.local/share/nvim/dein')
+if dein#load_state('/home/locutor/.cache/dein')
+  call dein#begin('/home/locutor/.cache/dein')
 
-  call dein#add('/home/locutor/.local/share/nvim/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('/home/locutor/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   call dein#add('neoclide/coc.nvim', {
         \ 'merged':0, 
@@ -28,4 +28,8 @@ if dein#load_state('/home/locutor/.local/share/nvim/dein')
 
   call dein#end()
   call dein#save_state()
+endif
+
+if dein#check_install()
+  call dein#install()
 endif

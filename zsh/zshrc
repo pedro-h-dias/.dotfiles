@@ -68,6 +68,7 @@ alias ll='exa -lh'
 alias la='exa -alh'
 alias find='fd'
 alias diff='diff-so-fancy'
+alias vim='nvim'
 
 # Theming section  
 autoload -U compinit colors zcalc
