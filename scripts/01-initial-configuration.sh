@@ -46,6 +46,8 @@ ln -sf ~/.dotfiles/.profile ~/.profile
 
 # install rust and go
 yay --needed --noconfirm -S go rustup
+rustup default stable
+
 
 # create alias to exa, fd and diff
 alias ls='exa'

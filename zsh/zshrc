@@ -107,5 +107,4 @@ bindkey '^[[B' history-substring-search-down
 ## Prompt section: Configure silver prompt
 SILVER=(status:black:white dir:blue:black git:green:black)
 export SILVER_SHELL=zsh
-export SILVER_ICONS=unicode
 eval "$(silver init)"
