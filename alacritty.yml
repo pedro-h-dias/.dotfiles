@@ -20,6 +20,8 @@ window:
 
   gtk_theme_variant: None
 
+  dynamic_title: true
+
 scrolling:
   history: 10000
 
@@ -80,7 +82,7 @@ colors:
 
   indexed_colors: []
 
-visual_bell:
+bell:
   duration: 0
 
 background_opacity: 1.0
@@ -88,8 +90,6 @@ background_opacity: 1.0
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
   save_to_clipboard: true
-
-dynamic_title: true
 
 cursor:
   style: Block

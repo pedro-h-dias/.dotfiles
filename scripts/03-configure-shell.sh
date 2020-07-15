@@ -16,7 +16,8 @@ cargo install silver
 #
 # this check is here because '--needed' isn't working 
 # with AUR packages
-if [ ! -n $(yay -Qi nerd-fonts-complete 2>&1 >/dev/null | cut -f2) ]; then
+if [ -n $(yay -Qi nerd-fonts-complete 2>&1 >/dev/null | cut -d "'" -f2) ]; then
+  yay --noconfirm -R manjaro-ranger-settings nerd-fonts-terminus
   yay --needed --noconfirm -S nerd-fonts-complete
 fi
 

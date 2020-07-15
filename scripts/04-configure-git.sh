@@ -5,7 +5,7 @@ ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
 # clone repositories
 mkdir -p ~/ITA_Sec
-git clone --recursive git@github.com:pedro-h-dias/ITA.git ~/ITA
+git clone git@github.com:pedro-h-dias/ITA.git ~/ITA
 git clone git@github.com:pedro-h-dias/wargames.git ~/ITA_Sec/wargames
 git clone git@github.com:pedro-h-dias/hackthebox.git ~/ITA_Sec/hackthebox
 git clone git@github.com:pedro-h-dias/ctf.git ~/ITA_Sec/ctf
