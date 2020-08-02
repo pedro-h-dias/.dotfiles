@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Source config files
+source $HOME/.profile
+
 # Path section
 export GOPATH=$HOME/.gopath
 export PATH=$HOME/.cargo/bin:$PATH
