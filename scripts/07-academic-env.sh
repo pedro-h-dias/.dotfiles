@@ -34,3 +34,6 @@ sudo modprobe vboxdrv
 
 # TODO: find a way to automate kali machine
 	
+
+# install Google Cloud Tools
+yay --noconfirm --needed -S google-cloud-sdk
