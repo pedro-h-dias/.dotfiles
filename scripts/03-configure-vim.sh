@@ -28,3 +28,10 @@ rustup component add rls rust-analysis rust-src
 
 # install coc-rls plugin
 nvim +":CocInstall coc-rls" +qa
+
+# install python language server
+nvim +":CocInstall coc-python" +qa
+ln -sf ~/.dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+
+# python environment setup
+pip install mypy

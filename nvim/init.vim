@@ -37,7 +37,7 @@ set autoindent
 map <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -79,3 +79,7 @@ set undofile
 set undodir=$HOME/.vimundo
 set undolevels=1000
 set undoreload=10000
+
+" Autoformat python code on save
+let g:autopep8_on_save = 1
+let g:autopep8_disable_show_diff=1
