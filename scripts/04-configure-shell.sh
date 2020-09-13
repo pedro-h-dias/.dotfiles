@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install zsh
-yay --needed --noconfirm -S \
+yay --needed noconfirm -S \
 	zsh \
 	zsh-autosuggestions \
 	zsh-completions \

@@ -22,6 +22,7 @@ fi
 # install base packages
 yay --needed --noconfirm -S \
 	curl \
+	cmake \
 	diff-so-fancy \
 	exa \
 	fd \
@@ -34,7 +35,8 @@ yay --needed --noconfirm -S \
 	unrar \
 	unzip \
 	wget \
-	xclip 
+	xclip \
+	veracrypt
 
 # install monitoring packages
 yay --needed --noconfirm -S \
