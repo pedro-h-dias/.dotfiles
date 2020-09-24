@@ -11,8 +11,6 @@ sudo modprobe vboxdrv
 # load modules for _bridged_ and _hostonly_ networks
 sudo modprobe vboxnetadp vboxnetflt 
 
-# TODO: find a way to automate kali machine with vagrant
-
 # install and enable docker
 yay -S --noconfirm --needed docker
 sudo systemctl enable --now docker
