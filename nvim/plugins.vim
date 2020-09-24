@@ -26,6 +26,7 @@ if dein#load_state('/home/locutor/.cache/dein')
   call dein#add('tpope/vim-fugitive')
   call dein#add('ryanoasis/vim-devicons') 
   call dein#add('tell-k/vim-autopep8')
+  call dein#add('pprovost/vim-ps1')
 
   call dein#end()
   call dein#save_state()

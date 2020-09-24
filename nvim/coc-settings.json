@@ -2,5 +2,5 @@
   "python.jediEnabled": false,
   "python.linting.mypyEnabled": true,
   "python.venvPath": "~/.venv/",
-  "python.pythonPath": "~/.venv/cnpj-scraper/bin/python"
+  "python.pythonPath": "~/.venv/etl/bin/python"
 }
