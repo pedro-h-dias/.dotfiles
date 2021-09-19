@@ -22,6 +22,8 @@ window:
 
   dynamic_title: true
 
+  opacity: 1.0
+
 scrolling:
   history: 10000
 
@@ -85,8 +87,6 @@ colors:
 bell:
   duration: 0
 
-background_opacity: 1.0
-
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
   save_to_clipboard: true
@@ -136,8 +136,8 @@ key_bindings:
   - { key: C,        mods: Control|Shift, action: Copy             }
   - { key: Key0,     mods: Control,       action: ResetFontSize    }
   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  - { key: Add,      mods: Control,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Plus,      mods: Control,       action: IncreaseFontSize }
+  - { key: Minus, mods: Control,       action: DecreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
   - { key: Paste,                   action: Paste                            }
   - { key: Copy,                    action: Copy                             }
