@@ -10,11 +10,14 @@ sudo sed -i 's/#Color/Color/' /etc/pacman.conf
 # update all packages
 sudo pacman --noconfirm -Syu
 
+# Install base-devel packages
+sudo pacman -S base-devel
+
 # install yay
 if ! which yay; then
 	git clone https://aur.archlinux.org/yay.git
 	pushd yay
-	makepkg -i --needed --noconfirm
+	makepkg -si --needed --noconfirm
 	popd
 	rm -rf yay
 fi

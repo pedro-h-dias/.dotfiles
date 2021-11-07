@@ -81,5 +81,5 @@ set undolevels=1000
 set undoreload=10000
 
 " Autoformat python code on save
-let g:autopep8_on_save = 1
-let g:autopep8_disable_show_diff=1
+" let g:autopep8_on_save = 1
+" let g:autopep8_disable_show_diff=1
