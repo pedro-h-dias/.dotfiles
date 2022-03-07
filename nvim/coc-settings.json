@@ -1,6 +1,5 @@
 {
   "python.jediEnabled": false,
   "python.linting.mypyEnabled": true,
-  "python.venvPath": "~/.venv/",
-  "python.pythonPath": "~/.venv/etl/bin/python"
+  "python.pythonPath": "python"
 }
