@@ -65,10 +65,10 @@ alias cp="cp -i"                                                # Confirm before
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
-alias l='exa -lh'
-alias ls='exa'
-alias ll='exa -lh'
-alias la='exa -alh'
+alias l='exa -lh --group-directories-first'
+alias ls='exa --group-directories-first'
+alias ll='exa -lh --group-directories-first'
+alias la='exa -alh --group-directories-first'
 alias find='fd'
 alias diff='diff-so-fancy'
 alias vim='nvim'
@@ -108,6 +108,6 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 ## Prompt section: Configure silver prompt
-SILVER=(status:black:white dir:blue:black git:green:black)
+SILVER=(status:black:white dir:blue:black git:green:black virtualenv:magenta:black)
 export SILVER_SHELL=zsh
 eval "$(silver init)"
