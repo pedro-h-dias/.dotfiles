@@ -19,3 +19,6 @@ yay -S --noconfirm --needed lib32-libxft
 ln -sf $HOME/.dotfiles/scripts/matlab.desktop $HOME/.local/share/applications
 ln -sf $HOME/.dotfiles/scripts/quartus.desktop $HOME/.local/share/applications
 ln -sf $HOME/.dotfiles/scripts/modelsim.desktop $HOME/.local/share/applications
+
+# install tools for AVR 8 bits
+yay -S --noconfirm --needed avr-binutils avr-gcc avr-gdb avrdude

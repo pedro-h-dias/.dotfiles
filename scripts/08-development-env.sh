@@ -18,6 +18,13 @@ sudo systemctl enable --now docker
 # manage docker as non-root user
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+# install Vagrant
+yay -S --noconfirm --needed vagrant
+
+# install Ansible
+yay -S --noconfirm --needed ansible
 	
 # install Google Cloud Tools
-yay --noconfirm --needed -S google-cloud-sdk
+yay -S --noconfirm --needed google-cloud-sdk
+

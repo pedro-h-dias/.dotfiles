@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# install Vagrant
-yay -S --noconfirm --needed vagrant
-
 # install Kali VM
 if command -v vagrant &> /dev/null
 then
