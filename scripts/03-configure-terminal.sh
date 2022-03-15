@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# TODO: setup windows terminal programmatically
+
+# Install tmux
+if ! which tmux; then
+	yay --needed --noconfirm -S tmux-git
+fi
+
+# create link to tmux configs
+ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
+
 # install zsh
 yay --needed noconfirm -S \
 	zsh \
@@ -16,10 +26,10 @@ cargo install silver
 #
 # this check is here because '--needed' isn't working 
 # with AUR packages
-if [ -n $(yay -Qi nerd-fonts-complete 2>&1 >/dev/null | cut -d "'" -f2) ]; then
-  yay --noconfirm -R manjaro-ranger-settings nerd-fonts-terminus
-  yay --needed --noconfirm -S nerd-fonts-complete
-fi
+#if [ -n $(yay -Qi nerd-fonts-complete 2>&1 >/dev/null | cut -d "'" -f2) ]; then
+#  yay --noconfirm -R manjaro-ranger-settings nerd-fonts-terminus
+#  yay --needed --noconfirm -S nerd-fonts-complete
+#fi
 
 # link zsh config files
 ln -sf ~/.dotfiles/zsh/zshrc ~/.zshrc

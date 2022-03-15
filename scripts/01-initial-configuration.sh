@@ -7,8 +7,11 @@ cd
 # enable colors in pacman and yay
 sudo sed -i 's/#Color/Color/' /etc/pacman.conf
 
+# update key-ring
+sudo pacman -Syy archlinux-keyring
+
 # update all packages
-sudo pacman --noconfirm -Syu
+sudo pacman --noconfirm -Syyuu
 
 # Install base-devel packages
 sudo pacman -S base-devel
@@ -21,6 +24,11 @@ if ! which yay; then
 	popd
 	rm -rf yay
 fi
+
+# install programming languages
+yay --needed --noconfirm -S \
+	rust \
+	nodejs
 
 # install base packages
 yay --needed --noconfirm -S \
