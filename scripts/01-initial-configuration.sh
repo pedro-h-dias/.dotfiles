@@ -49,6 +49,9 @@ yay --needed --noconfirm -S \
 # create link to .profile
 ln -sf ~/.dotfiles/.profile ~/.profile
 
+# create link to keyboard layout fix
+sudo ln -sf ~/.dotfiles/profile.d/keyboard.sh /etc/profile.d/keyboard.sh
+
 # install rust and go
 yay --needed --noconfirm -S go rustup
 rustup default stable
