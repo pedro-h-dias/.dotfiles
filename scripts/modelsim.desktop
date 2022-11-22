@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=ModelSim-Altera Edition
-Comment=ModelSim simulation software for Altera FPGA's
-Exec=/usr/local/intelFPGA_lite/20.1/modelsim_ase/bin/vsim
-Icon=/usr/local/intelFPGA_lite/20.1/modelsim_ase/modesim.gif
-Terminal=true
-Type=Application
-Categories=Development
