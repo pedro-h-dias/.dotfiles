@@ -13,6 +13,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.
 # install rust tools
 cargo install exa bat procs
 
+# TODO: configure nerd-fonts
 # # install nerd-fonts
 # mkdir -p ~/.local/share/fonts/
 

@@ -11,3 +11,7 @@ sudo snap install inkscape
 
 # install password manager
 sudo snap install bitwarden
+
+# TODO: configure neovim
+# install neovim
+sudo apt install neovim

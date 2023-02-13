@@ -13,6 +13,13 @@ echo \
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# TODO: Run the Docker daemon as a non-root user (Rootless mode)
+# BODY: https://docs.docker.com/engine/security/rootless/
+# post install steps for docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
 # install kubernetes
 sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list

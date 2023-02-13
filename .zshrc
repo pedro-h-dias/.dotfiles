@@ -114,6 +114,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="exa --icons --group-directories-first"
+alias ls="exa --group-directories-first"
 alias cat="bat"
 alias ps="procs"
