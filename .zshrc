@@ -82,7 +82,16 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 fpath+=${ZSH_CUSTOM:-~/.oh-my-zsh}/custom/plugins/zsh-completions/src
+source "$HOME/.cargo/env"
+export PATH="/home/locutor/.local/bin:$PATH"
 
+# pyenv configuration
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# enable kubectl autocompletion
+source <(kubectl completion zsh)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -105,3 +114,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="exa --icons --group-directories-first"
+alias cat="bat"
+alias ps="procs"
