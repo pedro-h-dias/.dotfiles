@@ -12,7 +12,7 @@ fi
 if [ ! -f ~/.config/alacritty/alacritty.yml ]; then
   mkdir -p ~/.config/alacritty
 fi
-ln -sf ~/.dotfiles/alacritty.yml ~/.config/alacritty/
+ln -sf ~/.dotfiles/alacritty.toml ~/.config/alacritty/
 
 # create link to tmux configs
 ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
