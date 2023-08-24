@@ -111,3 +111,6 @@ bindkey '^[[B' history-substring-search-down
 SILVER=(status:black:white dir:blue:black git:green:black virtualenv:magenta:black)
 export SILVER_SHELL=zsh
 eval "$(silver init)"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
