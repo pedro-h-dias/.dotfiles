@@ -2,34 +2,24 @@
 
 # TODO: setup windows terminal programmatically
 
-# Install tmux
+# install tmux
 if ! which tmux; then
 	yay --needed --noconfirm -S tmux-git
 fi
 
-# create link to tmux configs
+# link tmux config files
 ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
 # install zsh
-yay --needed noconfirm -S \
-	zsh \
-	zsh-autosuggestions \
-	zsh-completions \
-	zsh-history-substring-search \
-	zsh-syntax-highlighting
+yay --needed --noconfirm -S zsh
 
-# install silver prompt
-cargo install silver
+# install oh-my-zsh
+sh -c "$(wget -O- https://install.ohmyz.sh/)"
 
-# install nerd-font-completes
-# TODO: find out how to install only a smaller patch
-#
-# this check is here because '--needed' isn't working 
-# with AUR packages
-#if [ -n $(yay -Qi nerd-fonts-complete 2>&1 >/dev/null | cut -d "'" -f2) ]; then
-#  yay --noconfirm -R manjaro-ranger-settings nerd-fonts-terminus
-#  yay --needed --noconfirm -S nerd-fonts-complete
-#fi
+# install zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # link zsh config files
-ln -sf ~/.dotfiles/zsh/zshrc ~/.zshrc
+ln -sf ~/.dotfiles/.zshrc ~/.zshrc

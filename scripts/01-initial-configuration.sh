@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # cd into ~
 cd
 
@@ -8,13 +7,19 @@ cd
 sudo sed -i 's/#Color/Color/' /etc/pacman.conf
 
 # update key-ring
-sudo pacman -Syy archlinux-keyring
+sudo pacman --noconfirm -Syy archlinux-keyring
 
 # update all packages
 sudo pacman --noconfirm -Syyuu
 
-# Install base-devel packages
-sudo pacman -S base-devel
+# install base-devel packages
+sudo pacman --noconfirm -S base-devel 
+
+# install git
+sudo pacman --noconfirm -S git
+
+# create link to git config
+ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
 # install yay
 if ! which yay; then
@@ -25,11 +30,6 @@ if ! which yay; then
 	rm -rf yay
 fi
 
-# install programming languages
-yay --needed --noconfirm -S \
-	rust \
-	nodejs
-
 # install base packages
 yay --needed --noconfirm -S \
 	curl \
@@ -37,34 +37,12 @@ yay --needed --noconfirm -S \
 	diff-so-fancy \
 	exa \
 	fd \
-	firefox \
-	make \
 	man-pages \
-	pavucontrol \
-	sudo \
 	tar \
 	unrar \
 	unzip \
 	wget \
-	xclip \
 	veracrypt
-
-# install monitoring packages
-yay --needed --noconfirm -S \
-	htop \
-	iotop
 
 # create link to .profile
 ln -sf ~/.dotfiles/.profile ~/.profile
-
-# install rust and go
-yay --needed --noconfirm -S go rustup
-rustup default stable
-
-
-# create alias to exa, fd and diff
-alias ls='exa'
-alias ll='exa -lh'
-alias la='exa -lha'
-alias find='fd'
-alias diff='diff-so-fancy'

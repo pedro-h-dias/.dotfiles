@@ -6,7 +6,7 @@
 
 Just follow the list below to make sure we cover everything in a new installation.
 
-These are the steps I took for my March 2022 ArchWSL build.
+These are the steps I took for my January 2024 ArchWSL build.
 
 ## Requirements
 
@@ -23,9 +23,4 @@ After following all the steps,
 1. Initial configuration
 2. Configure ssh, ssh-agent
 3. Configure terminal, shell, prompt
-4. Configure neovim
-5. Configure virtual disk
-6. Configure git, clone repositories.
-7. Setup work environment.
-8. Setup academic environment.
-9. Setup VMs and Docker.
+4. Setup development environment.
