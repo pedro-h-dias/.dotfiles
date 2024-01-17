@@ -10,7 +10,7 @@ fi
 if [ ! -f ~/.config/alacritty/alacritty.yml ]; then
   mkdir -p ~/.config/alacritty
 fi
-ln -sf ~/.dotfiles/alacritty.yml ~/.config/alacritty/
+ln -sf ~/.dotfiles/alacritty.toml ~/.config/alacritty/
 
 # set alacritty as default terminal
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator $HOME/.cargo/bin/alacritty 50
