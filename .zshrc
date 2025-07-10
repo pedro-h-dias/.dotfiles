@@ -79,6 +79,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+source $HOME/.profile
 
 # export MANPATH="/usr/local/man:$MANPATH"
 fpath+=${ZSH_CUSTOM:-~/.oh-my-zsh}/custom/plugins/zsh-completions/src
